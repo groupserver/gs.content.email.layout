@@ -1,0 +1,40 @@
+<tal:block xmlns:tal="http://xml.zope.org/namespaces/tal"
+           xmlns:metal="http://xml.zope.org/namespaces/metal"
+           metal:define-macro="page"><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <metal:block define-slot="title" />
+
+    <tal:block replace="structure provider:groupserver.emailStyle">
+      Replaced by the CSS viewlet-manager
+    </tal:block>
+
+    <base 
+      tal:define="u request/URL;
+                  u1 request/URL1;
+                  s python:'/' if request['ACTUAL_URL'][-1] == '/' else '';
+                  hasIndex python:u[-10:] == 'index.html';
+                  url python:'%s%s' % (u1, s) if hasIndex  else u"
+      tal:attributes="href url" />
+  </head>
+  <body>
+    <div id="toparea" role="banner">
+      <div id="titlebar">
+        <a id="titlebar-home-link" href="/"><span class="logo"> </span>
+        <span class="site" tal:content="siteName">Site Name</span></a>
+      </div><!--titlebar-->
+    </div><!--toparea-->
+    <div id="gs-content-layout-body">
+      <div id="bodyblock">    
+        <metal:block define-slot="body" />
+      </div><!--bodyblock-->
+    </div><!--gs-content-layout-body-->
+    <div id="gs-content-layout-footer">
+      <div id="gs-content-layout-footer-content">
+        
+      </div><!--gs-content-layout-footer-content-->
+    </div><!--gs-content-layout-footer-->
+  </body>
+</html>
+</tal:block>

@@ -45,6 +45,10 @@ setup(name='gs.content.email.layout',
     zip_safe=True,
     install_requires=[
         'setuptools',
+        'zope.browserpage',  # For the <browser:page config.
+        'zope.tal',  # For tal: and metal: attributes
+        'zope.tales',  # For what goes in the tal: and metal: attributes
+        'gs.content.email.css',  # For the CSS viewlet manager
     ],
     entry_points="""
     # -*- Entry points: -*-

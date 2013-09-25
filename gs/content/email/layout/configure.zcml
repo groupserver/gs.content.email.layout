@@ -2,5 +2,11 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser">
 
+  <browser:page 
+    name="groupserver_email_layout" 
+    for="*"
+    template="browser/templates/email_layout.pt"
+    permission="zope.Public" />
+
 </configure>
 
