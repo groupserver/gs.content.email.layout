@@ -6,9 +6,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <metal:block define-slot="title" />
 
-    <tal:block replace="structure provider:groupserver.emailStyle">
-      Replaced by the CSS viewlet-manager
-    </tal:block>
+    <style type="text/css"
+           tal:content="structure provider:groupserver.emailStyle">
+      Filled by the CSS viewlet-manager
+    </style>
 
     <base 
       tal:define="u request/URL;
