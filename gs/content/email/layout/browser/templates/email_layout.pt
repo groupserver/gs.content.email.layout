@@ -11,13 +11,7 @@
       Filled by the CSS viewlet-manager
     </style>
 
-    <base 
-      tal:define="u request/URL;
-                  u1 request/URL1;
-                  s python:'/' if request['ACTUAL_URL'][-1] == '/' else '';
-                  hasIndex python:u[-10:] == 'index.html';
-                  url python:'%s%s' % (u1, s) if hasIndex  else u"
-      tal:attributes="href url" />
+    <base href="/" tal:attributes="href view/base" />
   </head>
   <body>
     <div id="toparea" role="banner">
