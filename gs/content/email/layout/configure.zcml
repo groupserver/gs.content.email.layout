@@ -2,10 +2,28 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser">
 
+  <include package="zope.viewlet" file="meta.zcml" />
+
   <browser:page 
     name="groupserver_email_layout" 
     for="*"
     template="browser/templates/email_layout.pt"
     permission="zope.Public" />
+
+  <browser:viewletManager
+    name="groupserver.emailFooter"
+    provides=".interfaces.IHTMLEmailFooter"
+    class="gs.viewlet.manager.WeightOrderedViewletManager"
+    template="browser/templates/footer.pt"
+    permission="zope2.View" />
+  
+  <browser:viewlet
+    name="gs-content-email-layout-footer"
+    manager=".interfaces.IHTMLEmailFooter"
+    class="gs.viewlet.SiteViewlet"
+    template="browser/templates/footer-list.pt"
+    title="Simple footer"
+    weight="10" 
+    permission="zope2.Public"/>
 
 </configure>

@@ -7,7 +7,7 @@ Layout of HTML-formatted email notifications in GroupServer
 
 :Author: `Michael JasonSmith`_
 :Contact: Michael JasonSmith <mpj17@onlinegroups.net>
-:Date: 2013-09-25
+:Date: 2013-09-27
 :Organization: `GroupServer.org`_
 :Copyright: This document is licensed under a
   `Creative Commons Attribution-Share Alike 3.0 New Zealand License`_
@@ -34,8 +34,7 @@ layout. To use it call the following in the ``<html>`` element::
     xmlns:metal="http://xml.zope.org/namespaces/metal"
     metal:use-macro="context/@@groupserver_email_layout/page">
 
-There is are two slots defined by the macro: one for the title and one for
-the body of the messages.
+There are three slots defined by the macro.
 
 ``metal:fill-slot="title"``: 
   The compulsory title of the page. It is **always** provided by pages that
@@ -43,6 +42,11 @@ the body of the messages.
   element. It is *normally* set to the subject of the email message::
   
     <title metal:fill-slot="title">This is the title</title>
+
+``metal:fill-slot="prebody"``: 
+  The optional content that appears before the header of the page. Used by
+  some pages to emulate the look of an email message by adding false To,
+  From and Subject fields.
 
 ``metal:fill-slot="body"``:
   The **compulsory** body of the page.
@@ -67,6 +71,18 @@ Example
     </body>
   </html>
 
+Viewlets
+========
+
+The email layout uses two viewlet managers. The ``groupserver.emailStyle``
+manager supplies the CSS that lays out the message [#css]_. The footer is
+supplied by the ``groupserver.emailFooter``, which is provided by this
+product.
+
+Within the footer there is one viewlet by default:
+``gs-content-email-layout-footer``. It links to the Privacy policy,
+Acceptable use policy, and the About page for the site.
+
 Resources
 =========
 
@@ -83,3 +99,7 @@ Resources
 
 .. [#base] See <https://source.iopen.net/groupserver/gs.content.email.base/>
 .. [#notify] See  <https://source.iopen.net/groupserver/gs.profile.notify/>
+.. [#css] See  <https://source.iopen.net/groupserver/gs.content.email.css/>
+
+..  LocalWords:  Viewlets CSS groupserver emailFooter emailStyle css http
+..  LocalWords:  nz prebody tal

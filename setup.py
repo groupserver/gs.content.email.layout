@@ -48,6 +48,7 @@ setup(name='gs.content.email.layout',
         'zope.browserpage',  # For the <browser:page config.
         'zope.tal',  # For tal: and metal: attributes
         'zope.tales',  # For what goes in the tal: and metal: attributes
+        'zope.viewlet',  # For the footer viewlet and viewlet manager
         'gs.content.email.css',  # For the CSS viewlet manager
     ],
     entry_points="""

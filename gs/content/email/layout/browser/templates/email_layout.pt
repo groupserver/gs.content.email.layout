@@ -5,7 +5,6 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <metal:block define-slot="title" />
-
     <style type="text/css"
            tal:content="structure provider:groupserver.emailStyle">
       Filled by the CSS viewlet-manager
@@ -14,6 +13,9 @@
     <base href="/" tal:attributes="href view/base" />
   </head>
   <body>
+    <div id="gs-content-email-layout-prebody">
+      <metal:block define-slot="prebody" />
+    </div>
     <div id="toparea" role="banner">
       <div id="titlebar">
         <a id="titlebar-home-link" href="/"><span class="logo"> </span>
@@ -26,8 +28,9 @@
       </div><!--bodyblock-->
     </div><!--gs-content-layout-body-->
     <div id="gs-content-layout-footer">
-      <div id="gs-content-layout-footer-content">
-        
+      <div id="gs-content-layout-footer-content"
+           tal:content="structure provider:groupserver.emailFooter">
+        Filled by the footer viewlet-manager
       </div><!--gs-content-layout-footer-content-->
     </div><!--gs-content-layout-footer-->
   </body>

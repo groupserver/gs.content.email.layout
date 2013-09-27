@@ -1,0 +1,15 @@
+<ul role="navigation" class="dotted-inline-list">
+  <li>
+    <a tal:attributes="href string:${view/siteInfo/url}/policies/privacy/"
+       href="/policies/privacy/">Privacy</a> <span class="muted">&#8226;</span>
+  </li>
+  <li>
+    <a tal:attributes="href string:${view/siteInfo/url}/policies/aup/"
+       href="/policies/aup/">Acceptable Use</a> 
+    <span class="muted">&#8226;</span>
+  </li>
+  <li>
+    <a tal:attributes="href string:${view/siteInfo/url}/policies/tos/"
+       href="/policies/tos/">Terms of Service</a>
+  </li>
+</ul>
