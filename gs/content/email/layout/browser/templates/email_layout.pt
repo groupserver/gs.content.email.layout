@@ -1,13 +1,20 @@
-<tal:block xmlns:tal="http://xml.zope.org/namespaces/tal"
-           xmlns:metal="http://xml.zope.org/namespaces/metal"
-           metal:define-macro="page"><!DOCTYPE html>
-<html lang="en">
+<metal:macro
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="gs.content.layout"
+  define-macro="page"><tal:doctype replace="structure string:&lt;!DOCTYPE html&gt;" />
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <metal:block define-slot="title" />
     <style type="text/css"
            tal:content="structure provider:groupserver.emailStyle">
-      Filled by the CSS viewlet-manager
+        The CSS that is embedded as style-attributes.
+    </style>
+    <style type="text/css" data-premailer="ignore"
+           tal:content="structure provider:groupserver.openEmailStyle">
+        The CSS that is left here.
     </style>
 
     <base href="/" tal:attributes="href view/base" />
@@ -23,7 +30,7 @@
       </div><!--titlebar-->
     </div><!--toparea-->
     <div id="gs-content-layout-body">
-      <div id="bodyblock">    
+      <div id="bodyblock">
         <metal:block define-slot="body" />
       </div><!--bodyblock-->
     </div><!--gs-content-layout-body-->
@@ -35,4 +42,4 @@
     </div><!--gs-content-layout-footer-->
   </body>
 </html>
-</tal:block>
+</metal:macro>
