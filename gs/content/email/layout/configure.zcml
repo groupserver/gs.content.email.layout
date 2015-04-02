@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright © 2013, 2014, 2015 OnlineGroups.net and Contributors. -->
+<!-- All Rights Reserved. -->
+
+<!-- This software is subject to the provisions of the Zope Public -->
+<!-- License, Version 2.1 (ZPL).  A copy of the ZPL should accompany this -->
+<!-- distribution. -->
+
+<!-- THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED -->
+<!-- WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED -->
+<!-- WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND -->
+<!-- FITNESS FOR A PARTICULAR PURPOSE. -->
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser">
 
   <include package="zope.viewlet" file="meta.zcml" />
 
-  <browser:page 
-    name="groupserver_email_layout" 
+  <browser:page
+    name="groupserver_email_layout"
     for="*"
     template="browser/templates/email_layout.pt"
     permission="zope.Public" />
@@ -16,14 +27,14 @@
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/footer.pt"
     permission="zope2.View" />
-  
+
   <browser:viewlet
     name="gs-content-email-layout-footer"
     manager=".interfaces.IHTMLEmailFooter"
     class="gs.viewlet.SiteViewlet"
     template="browser/templates/footer-list.pt"
     title="Simple footer"
-    weight="10" 
+    weight="10"
     permission="zope2.Public"/>
 
 </configure>
