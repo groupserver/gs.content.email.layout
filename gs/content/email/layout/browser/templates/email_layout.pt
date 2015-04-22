@@ -24,23 +24,26 @@
     <div id="gs-content-email-layout-prebody">
       <metal:block define-slot="prebody" />
     </div>
-    <div id="toparea" role="banner">
-      <div id="titlebar">
-        <a id="titlebar-home-link" href="/"><span class="logo"> </span>
-        <span class="site" tal:content="view/siteInfo/name">Site Name</span></a>
-      </div><!--titlebar-->
-    </div><!--toparea-->
-    <div id="gs-content-layout-body">
-      <div id="bodyblock">
-        <metal:block define-slot="body" />
-      </div><!--bodyblock-->
-    </div><!--gs-content-layout-body-->
-    <div id="gs-content-layout-footer">
-      <div id="gs-content-layout-footer-content"
-           tal:content="structure provider:groupserver.emailFooter">
-        Filled by the footer viewlet-manager
-      </div><!--gs-content-layout-footer-content-->
-    </div><!--gs-content-layout-footer-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+           id="gs-content-email-layout-body">
+      <tr id="toparea" role="banner">
+        <td id="titlebar">
+          <a id="titlebar-home-link" href="/"><span class="logo"> </span>
+          <span class="site" tal:content="view/siteInfo/name">Site Name</span></a>
+        </td><!--titlebar-->
+      </tr><!--toparea-->
+      <tr id="gs-content-layout-body">
+        <td id="bodyblock">
+          <metal:block define-slot="body" />
+        </td><!--bodyblock-->
+      </tr><!--gs-content-layout-body-->
+      <tr id="gs-content-layout-footer">
+        <td id="gs-content-layout-footer-content"
+            tal:content="structure provider:groupserver.emailFooter">
+          Filled by the footer viewlet-manager
+        </td><!--gs-content-layout-footer-content-->
+      </tr><!--gs-content-layout-footer-->
+    </table>
   </body>
 </html>
 </metal:macro>
