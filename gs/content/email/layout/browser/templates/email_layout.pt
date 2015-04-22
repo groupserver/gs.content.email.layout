@@ -7,6 +7,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <metal:block define-slot="title" />
     <style type="text/css"
            tal:content="structure provider:groupserver.emailStyle">
@@ -16,7 +18,6 @@
            tal:content="structure provider:groupserver.openEmailStyle">
         The CSS that is left here.
     </style>
-
     <base href="/" tal:attributes="href view/base" />
   </head>
   <body>
