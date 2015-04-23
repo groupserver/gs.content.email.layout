@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.2.0 (2015-04-23)
+------------------
+
+* Fixing the site-URL
+* Switching to a table-based layout
+
 2.1.3 (2015-04-02)
 ------------------
 
