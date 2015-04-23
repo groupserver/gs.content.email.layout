@@ -3,8 +3,7 @@
   xmlns:metal="http://xml.zope.org/namespaces/metal"
   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
   i18n:domain="gs.content.layout"
-  define-macro="page"><tal:doctype replace="structure string:&lt;!DOCTYPE html&gt;" />
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  define-macro="page"><html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="utf-8" />
@@ -28,14 +27,23 @@
            id="gs-content-email-layout-body">
       <tr id="toparea" role="banner">
         <td id="titlebar">
-          <a id="titlebar-home-link" href="/"><span class="logo"> </span>
+          <a id="titlebar-home-link"
+             tal:attributes="href view/siteInfo/url"
+             href="/"><span class="logo"> </span>
           <span class="site" tal:content="view/siteInfo/name">Site Name</span></a>
         </td><!--titlebar-->
       </tr><!--toparea-->
       <tr id="gs-content-layout-body">
-        <td id="bodyblock">
-          <metal:block define-slot="body" />
-        </td><!--bodyblock-->
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                 id="gs-content-email-layout-fluid-body">
+            <tr>
+              <td id="bodyblock">
+                <metal:block define-slot="body" />
+              </td><!--bodyblock-->
+            </tr>
+          </table><!--gs-content-email-layout-fluid-body-->
+        </td>
       </tr><!--gs-content-layout-body-->
       <tr id="gs-content-layout-footer">
         <td id="gs-content-layout-footer-content"
