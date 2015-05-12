@@ -23,6 +23,18 @@ There are three slots defined by the macro.
 
     <title metal:fill-slot="title">This is the title</title>
 
+``metal:fill-slot="preheader"``:
+  Some email clients show a short snippet of text from the email
+  message just below the ``Subject`` as a preview. For a normal
+  notification this will usually be the site-name and the header
+  from the body. While ok, notifications can add a *preheader*
+  that will be **hidden** in the HTML, but will appear as a
+  preview.
+
+.. code-block:: xml
+
+   <span metal:fill-slot="preheader">This appears below the Subject</span>
+
 ``metal:fill-slot="prebody"``: 
   The optional content that appears before the header of the
   page. Used by some pages to emulate the look of an email
@@ -52,4 +64,4 @@ Example
     </body>
   </html>
 
-..  LocalWords:  mailheader
+..  LocalWords:  mailheader preheader
