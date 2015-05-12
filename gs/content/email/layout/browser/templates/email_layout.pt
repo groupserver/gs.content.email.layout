@@ -20,6 +20,9 @@
     <base href="/" tal:attributes="href view/base" />
   </head>
   <body>
+    <span id="gs-content-email-layout-preheader">
+      <metal:block define-slot="preheader" />
+    </span>
     <div id="gs-content-email-layout-prebody">
       <metal:block define-slot="prebody" />
     </div>
