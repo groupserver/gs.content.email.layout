@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3.3 (2015-09-03)
+------------------
+
+* Subtle adjustments to the width, for small-screen devices
+
 2.3.2 (2015-07-24)
 ------------------
 
