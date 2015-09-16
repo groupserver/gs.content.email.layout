@@ -1,6 +1,13 @@
 Changelog
 =========
 
+2.3.4 (2015-09-16)
+------------------
+
+* Setting the background colour and foreground colour to the
+  GroupServer defaults (``#ffffff`` and ``#333333`` respectively)
+  for *IBM Notes*
+
 2.3.3 (2015-09-03)
 ------------------
 
