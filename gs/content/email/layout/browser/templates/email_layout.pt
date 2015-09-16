@@ -20,7 +20,7 @@
     <base href="/" tal:attributes="href view/base" />
   </head>
   <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0"
-        offset="0" bgcolor="" >
+        offset="0" color="#333333" bgcolor="#FFFFFF" >
     <span id="gs-content-email-layout-preheader">
       <metal:block define-slot="preheader" />
     </span>
