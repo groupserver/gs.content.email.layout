@@ -7,6 +7,7 @@ Changelog
 * Setting the background colour and foreground colour to the
   GroupServer defaults (``#ffffff`` and ``#333333`` respectively)
   for *IBM Notes*
+  <https://litmus.com/blog/background-colors-html-email>
 
 2.3.3 (2015-09-03)
 ------------------
