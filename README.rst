@@ -29,7 +29,7 @@ Resources
 - Code repository:
   https://github.com/groupserver/gs.content.email.layout/
 - Documentation:
-  http://groupserver.readthedocs.org/projects/gscontentemaillayout
+  http://groupserver.readthedocs.io/projects/gscontentemaillayout
 - Questions and comments to
   http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
