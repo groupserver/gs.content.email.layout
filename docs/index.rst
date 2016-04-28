@@ -25,7 +25,7 @@ Resources
 - Code repository:
   https://github.com/groupserver/gs.content.email.layout/
 - Documentation:
-  http://groupserver.readthedocs.org/projects/gscontentemaillayout
+  http://groupserver.readthedocs.io/projects/gscontentemaillayout
 - Questions and comments to
   http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
@@ -38,6 +38,6 @@ Indices and tables
 * :ref:`search`
 
 .. [#base] See ``gs.content.email.base``
-           <http://groupserver.readthedocs.org/projects/gscontentemailbase>
+           <http://groupserver.readthedocs.io/projects/gscontentemailbase>
 .. [#notify] See ``gs.content.email.base``
              <https://github.com/groupserver/gs.profile.notify/>
