@@ -41,7 +41,7 @@ Changelog
 * Adding the documentation to `Read the Docs`_
 
 .. _Read the Docs:
-   http://groupserver.readthedocs.org/projects/gscontentemaillayout
+   http://groupserver.readthedocs.io/projects/gscontentemaillayout
 
 2.1.2 (2014-10-10)
 ------------------
